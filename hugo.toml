@@ -18,6 +18,7 @@ ignoreErrors = ["error-disable-taxonomy"]
 [permalinks]
   blog  = "/blog/:slug/"
   posts = "/posts/:slug/"
+  music = "/music/:slug/"
   projects = "/projects/:slug/"
   home = "/home/:slug/"
 

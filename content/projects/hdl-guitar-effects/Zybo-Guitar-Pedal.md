@@ -23,7 +23,12 @@ title = 'HDL Guitar Effects Pedal'
 
 # Background
 
-This project was inspired from my love of guitar playing and FPGAs. A lot of designs use the PS side of the Zynq for DSP, which is cool but I wanted to challenge myself to design the DSP pipelines on the PL side and allow the PS to be used for configuring the effects.
+This project was inspired from my love of guitar playing and FPGAs. A lot of designs use the PS side of the Zynq for DSP, which is cool but I wanted to challenge myself to design the DSP pipelines on the PL side and allow the PS to be used for configuring the effects. The general idea when it comes to HDL Coder is
+
+- Create Reference design in Vivado
+- Design IP-Core in Simulink
+- Generate IP Core with HDL Coder
+    - Simulink (HDL Workflow Advisor) will implant the IP-Core into the design
 
 # Diagram
 
