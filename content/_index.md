@@ -33,4 +33,10 @@ My Name is Landon Jackson, I am an Electrical Engineer. This blog hosts my proje
 - Guitar
 - Paintball
 
+### Contact
+------
+Email: landonbjackson@protonmail.com
+
+Discord: hobophobicbum
+
 
