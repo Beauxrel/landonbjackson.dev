@@ -4,9 +4,9 @@ baseURL = 'https://landonbjackson.dev/'
 theme = 'hugo-bearblog'
 
 # Basic metadata configuration.
-title = 'Landon B Jackson Blog'
+title = "Landon's Blog"
 author = "Landon Jackson"
-copyright = "Copyright © 2020, Jane Doe."
+copyright = "Copyright © 2020, Landon Jackson."
 
 # Generate a nice robots.txt for SEO
 enableRobotsTXT = true
@@ -19,3 +19,9 @@ ignoreErrors = ["error-disable-taxonomy"]
   blog  = "/blog/:slug/"
   posts = "/posts/:slug/"
   projects = "/projects/:slug/"
+  home = "/home/:slug/"
+
+[params]
+    favicon = "images/favicon.png"
+    images = ["images/share.png"]
+
