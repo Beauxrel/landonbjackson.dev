@@ -25,3 +25,8 @@ ignoreErrors = ["error-disable-taxonomy"]
     favicon = "images/favicon.png"
     images = ["images/share.png"]
 
+# Allows me to use HTML in Markdown WOAH!!!!
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
