@@ -1,7 +1,7 @@
 +++
 date = '2026-01-11T00:01:09-05:00'
 draft = false
-title = 'My First Post'
+title = 'Zybo Guitar Pedal'
 +++
 ## Introduction
 

@@ -1,0 +1,16 @@
+# Hugo build output
+/public/
+/resources/
+.hugo_build.lock
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log

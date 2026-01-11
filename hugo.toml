@@ -1,4 +1,21 @@
 baseURL = 'https://landonbjackson.dev/'
-languageCode = 'en-us'
-title = 'LBJ Blog'
+
+# Theme Name
 theme = 'hugo-bearblog'
+
+# Basic metadata configuration.
+title = 'Landon B Jackson Blog'
+author = "Landon Jackson"
+copyright = "Copyright © 2020, Jane Doe."
+
+# Generate a nice robots.txt for SEO
+enableRobotsTXT = true
+
+# Generate "Bearblog"-like URLs !only!, see https://bearblog.dev/.
+disableKinds = ["taxonomy"]
+ignoreErrors = ["error-disable-taxonomy"]
+
+[permalinks]
+  blog  = "/blog/:slug/"
+  posts = "/posts/:slug/"
+  projects = "/projects/:slug/"
