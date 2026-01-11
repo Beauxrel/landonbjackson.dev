@@ -1,0 +1,4 @@
+baseURL = 'https://landonbjackson.dev/'
+languageCode = 'en-us'
+title = 'LBJ Blog'
+theme = 'hugo-bearblog'
