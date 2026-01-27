@@ -4,13 +4,14 @@ menu = "main"
 weight = 100
 +++
 
+<body class="stream">
+
 <video id='hls-example'  class="video-js vjs-default-skin" width="1000" height="800" controls>
 <source type="application/x-mpegURL" src="https://3d-printer.landonbjackson.dev/3d-printer/stream.m3u8">
 </video>
 
 <!-- CSS  -->
  <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
-
 
 <!-- JS code -->
 <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
@@ -22,3 +23,8 @@ weight = 100
 var player = videojs('hls-example');
 player.play();
 </script>
+
+
+# Currently Building:
+
+![BearBrick](../images/bearbrick-3d-print-static-3d-model-293064b471.png)

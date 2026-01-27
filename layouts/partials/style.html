@@ -149,5 +149,22 @@
   ul.blog-posts li a:visited {
     color: var(--visited-color);
   }
+  body.stream {
+    --background-color: #c8c8c8;
+    --text-color: #000000;
+    --heading-color: #000;
+    --link-color: #000000;
+  }
+    /* Fix Video.js play button positioning */
+  body.stream .video-js {
+    position: relative;
+  }
+
+  body.stream .video-js .vjs-big-play-button {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
 
 </style>
