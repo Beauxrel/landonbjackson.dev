@@ -19,6 +19,7 @@ ignoreErrors = ["error-disable-taxonomy"]
   blog  = "/blog/:slug/"
   posts = "/posts/:slug/"
   music = "/music/:slug/"
+  printer-stream = "/printer-stream/:slug/"
   projects = "/projects/:slug/"
   home = "/home/:slug/"
 
