@@ -37,7 +37,3 @@ My Name is Landon Jackson, I am an Electrical Engineer. This blog hosts my proje
 ### Contact
 ------
 Email: landonbjackson@protonmail.com
-
-Discord: hobophobicbum
-
-
