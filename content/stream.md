@@ -27,4 +27,4 @@ player.play();
 
 # Currently Building:
 
-![BearBrick](../images/raspberry-pi-case.png)
+![BearBrick](../images/case.png)
