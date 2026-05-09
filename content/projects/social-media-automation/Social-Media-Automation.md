@@ -23,3 +23,12 @@ Postgres - database for miniflux (It stores all the feed subscriptions, fetched 
 Ignore the wyze-bridge, that is what is control the stream on my website. 😂
 
 ![Stack](./images/SMA_0.png)
+
+
+# Setup
+
+I needed to separate Postiz because I could not for the life of me get it to work in my 'automation' docker container. I typically resort to using the guide for the services when AI cannot figure it out, who would guess reading the instructions WORKS! after that it comes down to networking. getting your ports together is the name of the game. I would post my ports, but I dont want to make it that easy for anyone attacking my network.
+
+Here is a visualization of Docker ports. Another tip, if any concepts confuse try '"X topic" visualizaion' in Google.
+
+![Docker Ports](./images/SMA_1.png)
