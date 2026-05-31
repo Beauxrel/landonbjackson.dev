@@ -14,9 +14,19 @@ weight = 100
   autoplay
   muted
   width="100%"
-  height="480">
+  height="auto"
+  style="width:100%; max-width:960px; aspect-ratio:16/9;">
   <source src="https://stream.landonbjackson.dev/outside-cam/stream.m3u8" type="application/x-mpegURL" />
 </video>
+
+<style>
+  .video-js {
+    width: 100% !important;
+    max-width: 960px !important;
+    aspect-ratio: 16/9 !important;
+    height: auto !important;
+  }
+</style>
 
 <script>
   var player = videojs('hls-example', {
