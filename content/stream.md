@@ -4,26 +4,37 @@ menu = "main"
 weight = 100
 +++
 
-<body class="stream">
+<link href="https://vjs.zencdn.net/7.21.5/video-js.css" rel="stylesheet" />
+<script src="https://vjs.zencdn.net/7.21.5/video.min.js"></script>
 
-<video id='hls-example'  class="video-js vjs-default-skin" width="1000" height="800" controls>
-<source type="application/x-mpegURL" src="https://3d-printer.landonbjackson.dev/3d-printer/stream.m3u8">
-</video>
+<style>
+  .video-container {
+    width: 100%;
+    max-width: 960px;
+  }
+</style>
 
-<!-- CSS  -->
- <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
-
-<!-- JS code -->
-<!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
-<script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
-<script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
+<div class="video-container">
+  <video
+    id="hls-example"
+    class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9"
+    controls
+    autoplay
+    muted
+    preload="auto">
+    <source src="https://stream.landonbjackson.dev/outside-cam/stream.m3u8" type="application/x-mpegURL" />
+  </video>
+</div>
 
 <script>
-var player = videojs('hls-example');
-player.play();
+  var player = videojs('hls-example', {
+    autoplay: true,
+    muted: true,
+    liveui: true,
+    fluid: true
+  });
+  player.play();
 </script>
-
 
 # Currently Building:
 
