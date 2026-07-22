@@ -22,7 +22,7 @@ weight = 100
     autoplay
     muted
     preload="auto">
-    <source src="https://stream.landonbjackson.dev/outside-cam/stream.m3u8" type="application/x-mpegURL" />
+    <source src="https://stream.landonbjackson.dev/printer-cam/stream.m3u8" type="application/x-mpegURL" />
   </video>
 </div>
 
@@ -38,4 +38,4 @@ weight = 100
 
 # Currently Building:
 
-![BearBrick](../images/case.png)
+<!-- ![BearBrick](../images/wisblock.jpg) -->
