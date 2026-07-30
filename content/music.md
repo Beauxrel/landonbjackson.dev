@@ -7,8 +7,8 @@ weight = 100
 ## Now Playing 🎧:
 
 <p align="left">
-  <a href="https://github.com/kittinan/spotify-github-profile" style="pointer-events: none;">
-    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=0ehww26n0mvbf9dg0j6g10o93&cover_image=true&theme=natemoo-re&show_offline=false&background_color=121212&interchange=false&profanity=false&bar_color=53b14f&bar_color_cover=false">
+  <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=0ehww26n0mvbf9dg0j6g10o93&redirect=true">
+    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=0ehww26n0mvbf9dg0j6g10o93&cover_image=true&theme=spotify-embed&show_offline=true&background_color=494949&interchange=false&profanity=false&hide_remaster=false&mode=dark&bar_color=53b14f&bar_color_cover=false">
   </a>
 </p>
 
