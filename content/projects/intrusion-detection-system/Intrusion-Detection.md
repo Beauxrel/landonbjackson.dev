@@ -2,6 +2,9 @@
 date = '2026-07-04T00:01:09-05:00'
 draft = false
 title = 'Intrusion Detection System'
+description = 'Network intrusion detection system on a Zybo Z7-10 built in Vivado and Vitis 2025.2, including the challenge of processing traffic at 1 Gbps.'
+stack = ['Zynq', 'Vivado', 'Vitis', 'Networking']
+image = '/projects/intrusion-detection-system/images/block-design.png'
 +++
 
 # Introduction

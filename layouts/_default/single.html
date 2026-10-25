@@ -1,0 +1,24 @@
+{{ define "main" }}
+<article class="section">
+  <div class="wrap narrow">
+    {{ if .Section }}
+    <a class="back mono" href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a>
+    {{ end }}
+    {{ if not .Params.menu }}
+    <header class="post-head">
+      <h1 class="page-title">{{ .Title }}</h1>
+      <p class="mono muted">
+        <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "January 2, 2006" }}</time>
+        · {{ .ReadingTime }} min read
+      </p>
+      {{ with .Params.stack }}<ul class="chips">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+    </header>
+    {{ else }}
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ end }}
+    <div class="prose">
+      {{ .Content }}
+    </div>
+  </div>
+</article>
+{{ end }}

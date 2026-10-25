@@ -4,7 +4,7 @@ baseURL = 'https://landonbjackson.dev/'
 theme = 'hugo-bearblog'
 
 # Basic metadata configuration.
-title = "Landon's Blog"
+title = "Landon B. Jackson"
 author = "Landon Jackson"
 copyright = "Copyright © 2026, Landon Jackson."
 
@@ -24,6 +24,12 @@ ignoreErrors = ["error-disable-taxonomy"]
   home = "/home/:slug/"
 
 [params]
+    description = "Landon B. Jackson: FPGA / RF engineer specializing in RTL design, DSP, and Xilinx RFSoC systems."
+    email = "landonbjackson@gmail.com"
+    github = "https://github.com/Beauxrel"
+    # linkedin = "https://www.linkedin.com/in/your-handle/"
+    # Drop a PDF at static/resume.pdf and uncomment to show a download button.
+    # resume = "/resume.pdf"
     favicon = "images/favicon.png"
     images = ["images/share.png"]
     # Hide Footer

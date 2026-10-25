@@ -2,6 +2,9 @@
 date = '2026-01-11T00:01:09-05:00'
 draft = false
 title = 'HDL Guitar Effects Pedal'
+description = 'Real-time delay, flanger, tremolo, and LP/BP/HP filters implemented in Zynq programmable logic via a Simulink-to-HDL workflow, with the PS configuring effects.'
+stack = ['Zynq', 'HDL Coder', 'Simulink', 'Vivado']
+image = '/projects/hdl-guitar-effects/images/simulink-0.png'
 +++
 
 ## Software

@@ -1,0 +1,95 @@
+# Resume content rendered on the home page.
+# Edit this file to update the site; no template changes needed.
+
+name = "Landon B. Jackson"
+credential = "EIT"
+role = "FPGA / RF Engineer"
+location = "Columbus, OH"
+clearance = "Active Secret Clearance"
+summary = """Electrical and computer engineer designing and verifying FPGA-based DSP and RF systems \
+on Xilinx RFSoC platforms. I write SystemVerilog and VHDL, live in Vivado, and care about \
+VITA 49.2 signal interfaces, timing closure, and simulation-driven verification. Currently \
+pursuing an M.S. in Electrical & Computer Engineering at Georgia Tech."""
+
+interests = ["FPGAs", "Quantum computing", "Guitar", "Music production", "Paintball"]
+
+[[stats]]
+value = "5+"
+label = "Years at Battelle"
+[[stats]]
+value = "RFSoC"
+label = "Primary platform"
+[[stats]]
+value = "M.S. '27"
+label = "Georgia Tech ECE"
+
+[[experience]]
+company = "Battelle"
+location = "Columbus, OH"
+  [[experience.roles]]
+  title = "FPGA Engineer, Systems Development"
+  dates = "Jan 2026 – Present"
+  bullets = [
+    "Primary RTL author for VITA 49.2-compliant modules within an existing Xilinx RFSoC design, written in SystemVerilog and VHDL and implemented in Vivado",
+    "Prototype and simulate DSP algorithms for military communication systems",
+    "Write testbench simulations to verify functionality and close timing",
+    "Peer-review RTL in design reviews and coordinate with the team on customer deliverables",
+  ]
+  [[experience.roles]]
+  title = "Computer Engineer, Systems Development"
+  dates = "Jan 2023 – Dec 2025"
+  bullets = [
+    "Applied HDL Coder to implement RF signal processing algorithms on FPGA platforms, debugging systems to optimize performance",
+    "Retrofitted unsupported FPGA hardware into open-source code to meet project specifications",
+    "Developed a partial-reconfiguration system that dynamically changes project functionality",
+    "Built a custom Linux image with Buildroot, tailoring kernel configuration to project hardware",
+  ]
+  [[experience.roles]]
+  title = "Electrical Engineer Co-op, Systems Development"
+  dates = "Aug 2021 – Dec 2022"
+  bullets = [
+    "Designed a photoelectric solution for an existing system that enabled autocalibration and improved overall efficiency",
+    "Implemented a PIC32 microcontroller bootloader to enable remote firmware updates",
+  ]
+
+# Resume projects without a write-up page on the site.
+[[extra_projects]]
+title = "ESP32 Web-Based Temperature Monitoring"
+stack = ["C++", "ESP32", "ESP-IDF"]
+text = "ESP32 temperature sensing for HVAC monitoring with a real-time web GUI. Contributed SoftAP and Station mode enhancements to Espressif's GitHub repository (SDK v5.0)."
+[[extra_projects]]
+title = "PLC-Driven Robotic Arm over Ethernet"
+stack = ["Python", "PLC", "Raspberry Pi"]
+text = "PLC programming sending precise control instructions to a data processing unit over Ethernet, driving a low-cost robotic arm built from available servos."
+
+[[skills]]
+group = "HDL & FPGA"
+items = ["SystemVerilog", "VHDL", "Verilog", "RTL design", "VITA 49.2", "Xilinx RFSoC", "Vivado", "Vitis HLS", "HDL Coder"]
+[[skills]]
+group = "Signal Processing"
+items = ["DSP", "RF signal processing", "Radar signal processing", "MATLAB / Simulink", "GNU Radio"]
+[[skills]]
+group = "Software & Tools"
+items = ["C", "C++", "Python", "Rust", "Linux", "Buildroot", "Git", "ROS"]
+[[skills]]
+group = "Hardware & Test"
+items = ["Zynq / Zybo", "ESP32", "PIC", "STM32", "Altium", "PSpice"]
+
+[[education]]
+school = "Georgia Institute of Technology"
+degree = "M.S., Electrical & Computer Engineering"
+dates = "Expected May 2027"
+location = "Atlanta, GA"
+[[education]]
+school = "University of Toledo"
+degree = "B.S., Electrical Engineering & Computer Science"
+dates = "Dec 2022"
+location = "Toledo, OH"
+
+[[certs]]
+title = "Fundamentals of Engineering (FE): Electrical & Computer"
+year = "2023"
+[[certs]]
+title = "NACME Engineering Scholarship"
+year = "2020"
+

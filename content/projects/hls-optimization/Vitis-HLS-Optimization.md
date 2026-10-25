@@ -2,6 +2,9 @@
 date = '2026-01-25T00:01:09-05:00'
 draft = false
 title = 'Vitis HLS Loop Optimization'
+description = 'Notes from Georgia Tech ECE 8893: pipelining, unrolling, and array partitioning pragmas to squeeze latency out of HLS kernels on a PYNQ board.'
+stack = ['Vitis HLS', 'C++', 'PYNQ', 'Tcl']
+image = '/projects/hls-optimization/images/pipeline-0.png'
 +++
 
 # Introduction

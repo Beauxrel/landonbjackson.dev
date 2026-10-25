@@ -2,6 +2,9 @@
 date = '2026-05-08T00:01:09-05:00'
 draft = false
 title = 'Social Media Automation'
+description = 'Self-hosted Docker stack (n8n, Temporal, Postiz, Miniflux, Postgres) that curates and schedules FPGA and embedded content automatically.'
+stack = ['Docker', 'n8n', 'Temporal', 'Postgres']
+image = '/projects/social-media-automation/images/SMA_0.png'
 +++
 
 # Introduction

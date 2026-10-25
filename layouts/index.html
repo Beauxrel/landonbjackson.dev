@@ -1,0 +1,155 @@
+{{ define "main" }}
+{{ $r := site.Data.resume }}
+<section class="hero">
+  <canvas class="hero-wave" aria-hidden="true"></canvas>
+  <div class="wrap hero-inner">
+    <p class="eyebrow mono"><span class="pulse" aria-hidden="true"></span>Open to FPGA / RF / DSP opportunities</p>
+    <h1 class="hero-name">{{ $r.name }}<span class="cred">, {{ $r.credential }}</span></h1>
+    <p class="hero-role">{{ $r.role }}</p>
+    <ul class="hero-tags">
+      <li>{{ $r.clearance }}</li>
+      <li>{{ $r.location }}</li>
+      <li>Battelle</li>
+    </ul>
+    <p class="hero-summary">{{ $r.summary }}</p>
+    <div class="hero-cta">
+      {{ with site.Params.email }}<a class="btn" href="mailto:{{ . }}">Get in touch</a>{{ end }}
+      {{ with site.Params.resume }}<a class="btn btn-ghost" href="{{ . | relURL }}" download>Download resume</a>{{ end }}
+      <a class="btn btn-ghost" href="#projects">View projects</a>
+      {{ with site.Params.github }}<a class="btn btn-ghost" href="{{ . }}" rel="noopener">GitHub</a>{{ end }}
+      {{ with site.Params.linkedin }}<a class="btn btn-ghost" href="{{ . }}" rel="noopener">LinkedIn</a>{{ end }}
+    </div>
+    <dl class="stats">
+      {{ range $r.stats }}<div><dt>{{ .label }}</dt><dd>{{ .value }}</dd></div>{{ end }}
+    </dl>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <div class="wrap">
+    <h2 class="section-title"><span class="mono">01</span>Experience</h2>
+    {{ range $r.experience }}
+    <div class="company reveal">
+      <div class="company-head">
+        <h3>{{ .company }}</h3>
+        <span class="muted">{{ .location }}</span>
+      </div>
+      <ol class="timeline">
+        {{ range .roles }}
+        <li>
+          <div class="role-head">
+            <h4>{{ .title }}</h4>
+            <span class="mono muted">{{ .dates }}</span>
+          </div>
+          <ul class="bullets">{{ range .bullets }}<li>{{ . }}</li>{{ end }}</ul>
+        </li>
+        {{ end }}
+      </ol>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="wrap">
+    <h2 class="section-title"><span class="mono">02</span>Projects</h2>
+    <div class="cards">
+      {{ range (where site.RegularPages "Section" "projects").ByDate.Reverse }}
+        {{ partial "project-card.html" . }}
+      {{ end }}
+      {{ range $r.extra_projects }}
+      <article class="card reveal">
+        <div class="card-body">
+          <h3>{{ .title }}</h3>
+          <p>{{ .text }}</p>
+          <ul class="chips">{{ range .stack }}<li>{{ . }}</li>{{ end }}</ul>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <div class="wrap">
+    <h2 class="section-title"><span class="mono">03</span>Technical Skills</h2>
+    <div class="skills">
+      {{ range $r.skills }}
+      <div class="skill-group reveal">
+        <h3 class="mono">{{ .group }}</h3>
+        <ul class="chips">{{ range .items }}<li>{{ . }}</li>{{ end }}</ul>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section id="education" class="section">
+  <div class="wrap two-col">
+    <div>
+      <h2 class="section-title"><span class="mono">04</span>Education</h2>
+      {{ range $r.education }}
+      <div class="edu reveal">
+        <h3>{{ .school }}</h3>
+        <p>{{ .degree }}</p>
+        <p class="mono muted">{{ .dates }} · {{ .location }}</p>
+      </div>
+      {{ end }}
+    </div>
+    <div>
+      <h2 class="section-title"><span class="mono">05</span>Certifications</h2>
+      {{ range $r.certs }}
+      <div class="edu reveal">
+        <h3>{{ .title }}</h3>
+        <p class="mono muted">{{ .year }}</p>
+      </div>
+      {{ end }}
+      <h2 class="section-title small">Outside work</h2>
+      <ul class="chips">{{ range $r.interests }}<li>{{ . }}</li>{{ end }}</ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section contact">
+  <div class="wrap contact-inner reveal">
+    <h2>Let's build something fast.</h2>
+    <p>I'm interested in FPGA, RF, and DSP roles. The quickest way to reach me is email.</p>
+    <div class="hero-cta">
+      {{ with site.Params.email }}<a class="btn" href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+      {{ with site.Params.github }}<a class="btn btn-ghost" href="{{ . }}" rel="noopener">GitHub</a>{{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+  // Hero background: drifting I/Q-style carriers.
+  (function () {
+    var c = document.querySelector('.hero-wave');
+    if (!c) return;
+    var ctx = c.getContext('2d'), w, h, dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function size() { w = c.clientWidth; h = c.clientHeight; c.width = w * dpr; c.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); }
+    size(); window.addEventListener('resize', size);
+    var accent = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#38e1c6';
+    function frame(t) {
+      t = t || 0;
+      ctx.clearRect(0, 0, w, h);
+      for (var k = 0; k < 4; k++) {
+        ctx.beginPath();
+        ctx.globalAlpha = 0.22 - k * 0.04;
+        ctx.strokeStyle = accent; ctx.lineWidth = 1.25;
+        for (var x = 0; x <= w; x += 4) {
+          var env = Math.sin((x / w) * Math.PI);
+          var y = h * 0.62 + env * (28 + k * 14) * Math.sin(x * (0.012 + k * 0.004) + t * 0.0009 * (k + 1) + k) * Math.cos(x * 0.002 - t * 0.0003);
+          x ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+        }
+        ctx.stroke();
+      }
+      if (!still) requestAnimationFrame(frame);
+    }
+    frame();
+  })();
+</script>
+{{ end }}

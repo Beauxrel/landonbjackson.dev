@@ -1,0 +1,12 @@
+<article class="card reveal">
+  <a class="card-link" href="{{ .RelPermalink }}">
+    {{ with .Params.image }}<div class="card-img"><img src="{{ . | relURL }}" alt="" loading="lazy"></div>{{ end }}
+    <div class="card-body">
+      <p class="mono muted card-date">{{ .Date.Format "Jan 2006" }}</p>
+      <h3>{{ .Title }}</h3>
+      <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 140 }}{{ end }}</p>
+      {{ with .Params.stack }}<ul class="chips">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+      <span class="card-more">Read write-up →</span>
+    </div>
+  </a>
+</article>

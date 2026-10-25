@@ -1,7 +1,7 @@
 +++
 title = "Stream"
 menu = "main"
-weight = 100
+weight = 50
 +++
 
 <link href="https://vjs.zencdn.net/7.21.5/video-js.css" rel="stylesheet" />

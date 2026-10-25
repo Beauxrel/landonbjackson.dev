@@ -1,0 +1,28 @@
+{{ define "main" }}
+<section class="section page-head">
+  <div class="wrap">
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+  </div>
+</section>
+<section class="section tight">
+  <div class="wrap">
+    {{ if eq .Section "projects" }}
+    <div class="cards">
+      {{ range .Pages.ByDate.Reverse }}{{ partial "project-card.html" . }}{{ end }}
+    </div>
+    {{ else }}
+    <ul class="post-list">
+      {{ range .Pages.ByDate.Reverse }}
+      <li class="reveal">
+        <time class="mono muted" datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "02 Jan 2006" }}</time>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+      {{ else }}
+      <li class="empty muted">No posts yet. Check back soon.</li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
