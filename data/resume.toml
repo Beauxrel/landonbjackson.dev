@@ -5,7 +5,6 @@ name = "Landon B. Jackson"
 credential = "EIT"
 role = "FPGA / RF Engineer"
 location = "Columbus, OH"
-clearance = "Active Secret Clearance"
 summary = """Electrical and computer engineer designing and verifying FPGA-based DSP and RF systems \
 on Xilinx RFSoC platforms. I write SystemVerilog and VHDL, live in Vivado, and care about \
 VITA 49.2 signal interfaces, timing closure, and simulation-driven verification. Currently \
