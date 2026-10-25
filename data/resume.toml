@@ -14,7 +14,7 @@ interests = ["FPGAs", "Quantum computing", "Guitar", "Music production", "Paintb
 
 [[stats]]
 value = "5+"
-label = "Years at Battelle"
+label = "Years in industry"
 [[stats]]
 value = "RFSoC"
 label = "Primary platform"
@@ -23,33 +23,14 @@ value = "M.S. '27"
 label = "Georgia Tech ECE"
 
 [[experience]]
-company = "Battelle"
-location = "Columbus, OH"
-  [[experience.roles]]
-  title = "FPGA Engineer, Systems Development"
-  dates = "Jan 2026 – Present"
-  bullets = [
-    "Primary RTL author for VITA 49.2-compliant modules within an existing Xilinx RFSoC design, written in SystemVerilog and VHDL and implemented in Vivado",
-    "Prototype and simulate DSP algorithms for military communication systems",
-    "Write testbench simulations to verify functionality and close timing",
-    "Peer-review RTL in design reviews and coordinate with the team on customer deliverables",
-  ]
-  [[experience.roles]]
-  title = "Computer Engineer, Systems Development"
-  dates = "Jan 2023 – Dec 2025"
-  bullets = [
-    "Applied HDL Coder to implement RF signal processing algorithms on FPGA platforms, debugging systems to optimize performance",
-    "Retrofitted unsupported FPGA hardware into open-source code to meet project specifications",
-    "Developed a partial-reconfiguration system that dynamically changes project functionality",
-    "Built a custom Linux image with Buildroot, tailoring kernel configuration to project hardware",
-  ]
-  [[experience.roles]]
-  title = "Electrical Engineer Co-op, Systems Development"
-  dates = "Aug 2021 – Dec 2022"
-  bullets = [
-    "Designed a photoelectric solution for an existing system that enabled autocalibration and improved overall efficiency",
-    "Implemented a PIC32 microcontroller bootloader to enable remote firmware updates",
-  ]
+title = "FPGA Engineer, Systems Development"
+dates = "Jan 2026 – Present"
+[[experience]]
+title = "Computer Engineer, Systems Development"
+dates = "Jan 2023 – Dec 2025"
+[[experience]]
+title = "Electrical Engineer Co-op, Systems Development"
+dates = "Aug 2021 – Dec 2022"
 
 # Resume projects without a write-up page on the site.
 [[extra_projects]]

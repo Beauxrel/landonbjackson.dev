@@ -8,7 +8,6 @@
     <p class="hero-role">{{ $r.role }}</p>
     <ul class="hero-tags">
       <li>{{ $r.location }}</li>
-      <li>Battelle</li>
     </ul>
     <p class="hero-summary">{{ $r.summary }}</p>
     <div class="hero-cta">
@@ -27,25 +26,18 @@
 <section id="experience" class="section">
   <div class="wrap">
     <h2 class="section-title"><span class="mono">01</span>Experience</h2>
-    {{ range $r.experience }}
     <div class="company reveal">
-      <div class="company-head">
-        <h3>{{ .company }}</h3>
-        <span class="muted">{{ .location }}</span>
-      </div>
       <ol class="timeline">
-        {{ range .roles }}
+        {{ range $r.experience }}
         <li>
           <div class="role-head">
             <h4>{{ .title }}</h4>
             <span class="mono muted">{{ .dates }}</span>
           </div>
-          <ul class="bullets">{{ range .bullets }}<li>{{ . }}</li>{{ end }}</ul>
         </li>
         {{ end }}
       </ol>
     </div>
-    {{ end }}
   </div>
 </section>
 

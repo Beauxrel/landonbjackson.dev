@@ -155,10 +155,8 @@
 
   /* Experience timeline */
   .company { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
-  .company-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
-  .company-head h3 { font-size: 1.5rem; margin: 0; }
   .timeline { list-style: none; margin: 0; padding: 0 0 0 24px; border-left: 2px solid var(--border); }
-  .timeline > li { position: relative; padding-bottom: 28px; }
+  .timeline > li { position: relative; padding-bottom: 22px; }
   .timeline > li:last-child { padding-bottom: 0; }
   .timeline > li::before {
     content: ""; position: absolute; left: -32px; top: 6px; width: 14px; height: 14px; border-radius: 50%;
@@ -168,9 +166,6 @@
   .role-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; }
   .role-head h4 { font-size: 1.1rem; margin: 0; }
   .role-head .mono { font-size: 13px; }
-  .bullets { margin: 10px 0 0; padding-left: 18px; }
-  .bullets li { margin: 4px 0; }
-  .bullets li::marker { color: var(--accent); }
   @media (max-width: 560px) { .company { padding: 20px; } }
 
   /* Cards */
